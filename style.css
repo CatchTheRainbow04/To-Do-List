@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono", monospace;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(135deg,#fc03e3,#fcf403);
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#fc03e3,#fcf403);
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 20px 30px 70px;
+    border-radius: 20px;
+}
+.todo-app h2{
+    color: #fc03e3;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    user-select: none;
+    justify-content: center;
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    background: #fcf403;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+input{
+    flex:1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+.btnAdd{
+    border: none;
+    outline: none;
+    padding: 20px 40px;
+    background: linear-gradient(135deg,#fcf403,#fc03e3);
+    font-size: 16px;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: 1s ease;
+}
+.btnAdd:hover{
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(135deg,#fc03e3,#fcf403);
+}
+ul li{
+    list-style: none;
+    cursor: pointer;
+    padding: 20px 20px 10px 50px;
+    font-size: 20px;
+    user-select: none;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    background-image: url(img/radio-button-unchecked.png);
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    top: 19.5px;
+    left: 10px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(img/radio-button-checked.png);
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #555;
+    color: red;
+}
+.header {
+    width: 100%;
+    background: linear-gradient(#fc03e3,#fcf403);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    padding: 20px 100px;
+    backdrop-filter: blur(100px)
+}
+.header h2 img{
+    width: 20px;
+    margin-left: 15px;
+}
+.header nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: .5s ease;
+}
+.header nav a:hover {
+    color: #555;
+}
